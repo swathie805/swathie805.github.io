@@ -1,1 +1,66 @@
-# swathie805.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Framework Experiment</title>
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+            color: #333;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Fuzzy Bubbles', cursive;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+        ul {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>My Vue.js Web Page</h1>
+        <p>{{ intro }}</p>
+
+        <h2>Installation</h2>
+        <p>{{ installation }}</p>
+
+        <h2>Building the Page</h2>
+        <p>{{ building }}</p>
+
+        <h2>Difficulties & Solutions</h2>
+        <ul>
+            <li v-for="item in difficulties">{{ item }}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                intro: "This page demonstrates my first simple web page using the Vue.js framework.",
+                installation: "I included Vue.js using a CDN link in the <head> section of my HTML file. No local installation or backend server was needed.",
+                building: "I created a <div> with id='app', then used Vue.js to bind data properties to the page using double curly braces {{ }}. I added headings, paragraphs, and a list to show different sections of the page.",
+                difficulties: [
+                    "Figuring out the correct CDN link for Vue.js.",
+                    "Learning the basic syntax for binding data in Vue.",
+                    "Centering text and styling using CSS gradients."
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
